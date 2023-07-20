@@ -1,13 +1,22 @@
 // Fonction de récupération des data Naoned
 async function dataEvents() {
-    const response = await fetch (`https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&sort=-date&facet=emetteur&facet=rubrique&facet=lieu&facet=ville&facet=lieu_quartier`);
+    const response = await fetch('https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-eveneme[…]e%20de%20Formation&exclude.emetteur=Eglise%20Saint%20Jean');
     const infos = await response.json();
-    console.log(infos);
-    // console.log(infos.records[0].fields.emetteur)
+    console.log(infos)
+    array.push(infos.records[1].fields.type)
+    array.push(infos.records[1].fields.location)
+    return 
 }
 dataEvents()
 
 
+function filterArray() {  // théatre, danse, musique, exposition   & filtre date
+    // commencer par vérification format date & validité (si input type date = ok)
+    // filtre en fonction des dates
+    for (activity in infos) {
+        if () {}
+    }
+}
 
 
 
