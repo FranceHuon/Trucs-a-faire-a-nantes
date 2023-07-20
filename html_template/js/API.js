@@ -1,28 +1,16 @@
 // Fonction de récupération des data Naoned
+let array = [];
 async function dataEvents() {
-    const response = await fetch('https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-eveneme[…]e%20de%20Formation&exclude.emetteur=Eglise%20Saint%20Jean');
+    const response = await fetch('https://data.nantesmetropole.fr/api/records/1.0/search/?dataset=244400404_agenda-evenements-nantes-nantes-metropole&q=&start=0&sort=-date&facet=emetteur&facet=rubrique&facet=lieu&facet=ville&facet=lieu_quartier&exclude.rubrique=Sport&exclude.rubrique=Dialogue%20Citoyen&exclude.rubrique=Ev%C3%A9nements%20Emploi&exclude.ville=Saint%20Herblain&exclude.ville=Orvault&exclude.ville=Bouguenais&exclude.ville=Rez%C3%A9&exclude.ville=La%20Montagne&exclude.ville=Basse%20Goulaine&exclude.ville=Sainte%20Luce%20sur%20Loire&exclude.ville=Saint%20Sebastien%20sur%20Loire&exclude.ville=Carquefou&exclude.ville=Saint%20Aignan%20de%20Grand%20Lieu&exclude.ville=La%20Chapelle%20sur%20Erdre&exclude.ville%20=Cou%C3%ABron&exclude.emetteur=Eglise%20Notre%20Dame%20de%20Bon%20Port&exclude.emetteur=Eglise%20Saint%20Similien&exclude.emetteur=Temple%20Protestant&exclude.emetteur=Eglise%20Sainte%20Madeleine&exclude.emetteur=Centre%20de%20Formation&exclude.emetteur=Eglise%20Saint%20Jean');
     const infos = await response.json();
-    console.log(infos)
+    // console.log(infos)
     array.push(infos.records[1].fields.type)
     array.push(infos.records[1].fields.location)
-    return 
+    console.log(infos.records[1])
+    return infos
 }
 dataEvents()
-
-
-function filterArray() {  // théatre, danse, musique, exposition   & filtre date
-    // commencer par vérification format date & validité (si input type date = ok)
-    // filtre en fonction des dates
-    for (activity in infos) {
-        if () {}
-    }
-}
-
-
-
-
-
-
+// console.log(array)
 
 //Initialisation de la carte
 let carte = L.map('maCarte').setView([47.218371, -1.553621], 13);
@@ -70,3 +58,23 @@ carte.fitBounds(groupe.getBounds().pad(0.5));
 
 carte.addLayer(marqueurs);
 
+//Fonction de récupération des données GPS et mise dans un tableau
+// let placeArray = [];
+// function gpsPlace (idPlace) {
+//     let gpsString = dataEvents().records[idPlace].fields.location ;
+//     console.log(gpsString);
+//     let gpsNumber = gpsString.split (', ');
+//     console.log(gpsNumber[0]);
+//     console.log(gpsNumber[1])
+
+// }
+// gpsPlace (1)
+
+
+// function filterArray() {  // théatre, danse, musique, exposition   & filtre date
+//     // commencer par vérification format date & validité (si input type date = ok)
+//     // filtre en fonction des dates
+//     for (activity in infos) {
+//         if () {}
+//     }
+// }
