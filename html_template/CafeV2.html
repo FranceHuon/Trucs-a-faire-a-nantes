@@ -4,13 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Générateur de spectacles nantais</title>
-    <link href="CafeV2.css" rel="stylesheet"/>
-    <script src="js/CafeV2.js"></script>
+    <!-- <link href="css/CafeV2.css" rel="stylesheet"/>
+    <script src="js/CafeV2.js"></script> -->
   </head>
 
   <body>
     <header>
-          <img id= "image" src = "/Users/francehuon/Documents/Ada/Projets Collectifs/projet-collectif-dataviz-pierre-nathan-france/html_template/images/lu.png">
+          <!-- <img id= "image" src = "images/lu.png"> -->
           <div class="text">
             <h1 id="titre1">GÉNÉRATEUR</h1>
             <h1 id="titre2">D'ÉVÈNEMENTS</h1>
@@ -19,23 +19,36 @@
     </header>
 
     <div class = "main">
-      <img id ="image2" src = "/Users/francehuon/Documents/Ada/Projets Collectifs/projet-collectif-dataviz-pierre-nathan-france/html_template/images/Group.png">
+      <img id ="image2" src = "images/Group.png">
       <div class="questions">
         <h2 id="texte1">QUOI ?</h2>
         <h2 id="texte2">QUAND ?</h2>
       </div>
-      <div class="buttons" type="button">
-        <button id="button1">Théâtre</button>
-        <button id="button2">Musique</button>
-        <button id="button3">Conférence</button>
-        <button id="button4">Spectacle</button>
-      <div>
+
+      <form>
+        <label for="start">Start date:</label>
+        <input type="date" id="start" name="trip-start"
+             min="2023-07-24" max="2024-12-31">
+            </div>
+      <div class="preference">
+        <label for="input1">Théâtre</label>
+        <input type="checkbox" name="input1" id="input1">
+      </div>
+        <input type="checkbox" id="input2">Musique</input>
+        <label>Musique</label>
+
+        <input type="checkbox" id="input3">
+        <label>Conférence</label>
+
+        <input type="checkbox" id="input4">
+        <label>Spectacle</label>
+      <form>
     </div>
   </div>
     
-    <footer>
-        <h3 class= "footerBanner">Recherchez maintenant !</h3>
-    </footer>
+    <div>
+        <button id="SubmitButton" onclick="getDate()">Recherchez maintenant !</button>
+    </div>
 
     <div id="maCarte"></div>
 

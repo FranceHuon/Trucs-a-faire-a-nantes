@@ -14,14 +14,46 @@
 
 
     <body>
-        <div id="maCarte"></div>
+        <label id ="page">
+        <div>
+            <label for="start">Start date:</label>
+            <input type="date" id="start" name="trip-start"
+            min="2023-07-24" max="2024-12-31">
+        </div>
+        <div>
+            <label for="start">End date:</label>
+            <input type="date" id="end" name="trip-end"
+            min="2023-07-24" max="2024-12-31">
+        </div>
+        <div>
+            <input type="checkbox" id="musique" name="musique" value="musique">
+            <label for="musique">Musique</label>
+        </div>
+        <div>
+            <input type="checkbox" id="spectacle" name="spectacle" value="spectacle">
+            <label for="spectacle">Spectacle</label>
+        </div>
+        <div>
+            <input type="checkbox" id="conference" name="conference" value="conference">
+            <label for="conference">Conférence</label>
+        </div>
+        <div>
+            <input type="checkbox" id="expo" name="expo" value="expo">
+            <label for="expo">Expo</label>
+        </div>
+        <div>
+            <button onclick="dataEvents()">Cherchez</button>
+        </div>
+        </label>
 
+
+        <div id="maCarte"></div>
         <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>"
-
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     </body>
+
 
     <script src="js/API.js" ></script>
 

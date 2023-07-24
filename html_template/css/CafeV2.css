@@ -3,7 +3,7 @@ body {
 }
 
 #image {
-    width: 30%;
+    width: 10%;
     position: absolute;
 }
 
@@ -57,7 +57,7 @@ h2 {
     position: absolute;
 }
 
-button {
+/* input {
     border: 0;
     line-height: normal;
     font-size: 1em;
@@ -66,32 +66,39 @@ button {
     font-style: italic;
     color: var(--blanc-beige, #F8EEE1);
     border-radius: 50px;
-    width:100px;
-    height:100px;
+    width:30px;
+    height:30px;
     background-color: var(--vert, #898d55);
+} */
+
+.preference {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.5rem;
 }
 
-#button1 {
+/* #input1 {
     left: 850px;
-    bottom : 250px;
+    bottom : 400px;
     position: absolute;
-}
+} */
 
-#button2 {
+#input2 {
     left: 1000px;
-    bottom : 250px;
+    bottom : 400px;
     position: absolute;
 }
 
-#button3 {
+#input3 {
     left: 1150px;
-    bottom : 250px;
+    bottom : 400px;
     position: absolute;
 }
 
-#button4 {
+#input4 {
     left: 1300px;
-    bottom: 250px;
+    bottom: 400px;
     position: absolute;
 }
 
@@ -101,6 +108,16 @@ button {
     background-color: var(--noir-gris, #31302F);
     margin-top: 600px;
 }
+
+/* .label {
+    display: block;
+    position: absolute;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+.input,
+label {
+    margin: 0.4rem 0;
+} */
 
 h3 {
     color: var(--vert, #898d55);
