@@ -12,8 +12,7 @@ async function dataEvents() {
             arrayDate.push(infos.records[i])
         }
     }
-    console.log(arrayDate) 
-    
+
     // filtre par thème
     let arrayTheme = [];
     console.log(arrayDate[0].fields.type.slice(0,3))
@@ -44,25 +43,25 @@ async function dataEvents() {
             arrayTheme.push(arrayDate[i] )
         }
     }
-    console.log(arrayTheme)
-    
-    return infos
-}
-dataEvents()
-// console.log(array)
 
-
-
-
+    //Fonction de récupération des coordonées GPS
+    let dicoGPS = {};
+    for (i in arrayTheme) {
+        let name = arrayTheme[i].fields.lieu ;
+        let latLong = arrayTheme[i].fields.location ;
+        if (latLong != null) {
+            let dicoLatLong = {};
+            let splitLatLong = latLong.split(', ');
+                dicoLatLong["lat"] = splitLatLong[0];
+                dicoLatLong["long"] = splitLatLong[1];
+                dicoGPS[name] = dicoLatLong;
+        }
+    }
+    console.log(dicoGPS);
 
 //Initialisation de la carte
 let carte = L.map('maCarte').setView([47.218371, -1.553621], 13);
 
-//Coordonnées de lieux assez stylés (mais bien couvrir ses verres!)
-let places = {
-    "Lieu Unique : LU": {"lat": 47.2154659 , "long": -1.5457862},
-    "Stereolux": {"lat": 47.20511813 , "long": -1.5634211}
-}
 let tableauMarqueurs = [];
 
 
@@ -85,9 +84,9 @@ let icone = L.icon({
 })
 
 //Boucle pour les marqueurs
-for(place in places) {
+for(place in dicoGPS) {
     //on crée le marqueurs et on lui attribut une popup
-    let marqueur = L.marker([places[place].lat , places[place].long],
+    let marqueur = L.marker([dicoGPS[place].lat , dicoGPS[place].long],
     {icon: icone});//.addTo(carte); ==> Inutile lors de l'utilisation des clusters
     marqueur.bindPopup("<p>"+place+"</p>");
     marqueurs.addLayer(marqueur); //on ajoute le marqueur au groupe
@@ -101,16 +100,36 @@ carte.fitBounds(groupe.getBounds().pad(0.5));
 
 carte.addLayer(marqueurs);
 
-//Fonction de récupération des données GPS et mise dans un tableau
-// let placeArray = [];
-// function gpsPlace (idPlace) {
-//     let gpsString = dataEvents().records[idPlace].fields.location ;
-//     console.log(gpsString);
-//     let gpsNumber = gpsString.split (', ');
-//     console.log(gpsNumber[0]);
-//     console.log(gpsNumber[1])
+    return infos
+}
+dataEvents()
 
+
+// //Fonction récupération des noms
+// let arrayName = [];
+// for (i in arrayTheme) {
+//     let name = arrayTheme[i].fields.lieu ;
+//     arrayName.push(name);
 // }
-// gpsPlace (1)
+// console.log(typeof(arrayName))
+    
+// //Fonction récupération des coordonnées
+// let arrayLatLong = [];
+// let arrayLong = [];
+// let arrayLat = [];
+// for (i in arrayTheme) {
+//     let latLong = arrayTheme[i].fields.location ;
+//     arrayLatLong.push(latLong);
+//     console.log(typeof(latLong));
+//     if (latLong != null) {
+//         let splitLatLong = latLong.split(', ');
+//         arrayLat.push(splitLatLong[0]);
+//         arrayLong.push(splitLatLong[1]);
+//     }
+// }
 
-
+//Coordonnées de lieux 
+// let dicoGPS = {
+//     "Lieu Unique : LU": {"lat": 47.2154659 , "long": -1.5457862},
+//     "Stereolux": {"lat": 47.20511813 , "long": -1.5634211}
+// }
