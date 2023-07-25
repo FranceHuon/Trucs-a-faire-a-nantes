@@ -5,7 +5,7 @@
         <title></title>
         <meta charset='UTF-8' name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/CafeV3.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
         <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
@@ -14,44 +14,74 @@
 
 
     <body>
-        <label id ="page">
         <div>
-            <label for="start">Start date:</label>
-            <input type="date" id="start" name="trip-start"
-            min="2023-07-24" max="2024-12-31">
-        </div>
-        <div>
-            <label for="start">End date:</label>
-            <input type="date" id="end" name="trip-end"
-            min="2023-07-24" max="2024-12-31">
-        </div>
-        <div>
-            <input type="checkbox" id="musique" name="musique" value="musique">
-            <label for="musique">Musique</label>
-        </div>
-        <div>
-            <input type="checkbox" id="spectacle" name="spectacle" value="spectacle">
-            <label for="spectacle">Spectacle</label>
-        </div>
-        <div>
-            <input type="checkbox" id="conference" name="conference" value="conference">
-            <label for="conference">Conférence</label>
-        </div>
-        <div>
-            <input type="checkbox" id="expo" name="expo" value="expo">
-            <label for="expo">Expo</label>
-        </div>
-        <div>
-            <button onclick="dataEvents()">Cherchez</button>
-        </div>
-        </label>
+            <label id="page">
+                <div class="container">
+                    <img src="images/lu.png">
+                    <h1 id="titre1">GÉNÉRATEUR</h1>
+                    <h1 id="titre2">D'ÉVÈNEMENTS</h1>
+                    <h1 id="titre3">NANTAIS</h1>
+                </div>
+          
+                <div class = "main">
+                    <div class="checkbox">
+                        <div>
+                            <input type="checkbox" id="musique" name="musique" value="musique">
+                            <label for="musique">Musique</label>
+                        </div>
 
+                        <div>
+                            <input type="checkbox" id="spectacle" name="spectacle" value="spectacle">
+                            <label for="spectacle">Spectacle</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="conference" name="conference" value="conference">
+                            <label for="conference">Conférence</label>
+                        </div>
+
+                        <div>
+                            <input type="checkbox" id="expo" name="expo" value="expo">
+                            <label for="expo">Expo</label>
+                        </div>
+                    </div>
+                </div>
+        
+                <br>
+                <br>
+                <br>
+          
+                <div class="calendar">
+                    <div class="start">
+                        <label for="start">Date de début : </label>
+                        <input type="date" id="start" name="trip-start" min="2023-07-24" max="2024-12-31">
+                    </div>
+                    <br>
+                    <div class="end">
+                        <label for="start">Date de fin : </label>
+                        <input type="date" id="end" name="trip-end" min="2023-07-24" max="2024-12-31">
+                    </div>
+                </div>
+    
+                <br>
+            
+                <footer>
+                </footer>
+            
+                <br>
+                <br>
+                <br>
+
+                <div>
+                    <button onclick="dataEvents()">Cherchez</button>
+                </div>
+            </label>
+            
+        </div>
 
         <div id="maCarte"></div>
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
-        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-        crossorigin=""></script>
-        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+            <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>        
     </body>
 
 

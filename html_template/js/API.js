@@ -134,6 +134,13 @@ carte.fitBounds(groupe.getBounds().pad(0.5));
 
 carte.addLayer(marqueurs);
 
+// recup infos pour description evenement
+// let arrayDescription = [];
+// for (i in arrayTheme) {
+//     let name = arrayTheme[i].fields.lieu ;
+//     arrayName.push(name);
+// }
+
     return infos
 }
 
