@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Générateur de spectacles nantais</title>
+    <!-- <link href="css/CafeV2.css" rel="stylesheet"/>
+    <script src="js/CafeV2.js"></script> -->
+  </head>
+
+  <body>
+    <header>
+          <!-- <img id= "image" src = "images/lu.png"> -->
+          <div class="text">
+            <h1 id="titre1">GÉNÉRATEUR</h1>
+            <h1 id="titre2">D'ÉVÈNEMENTS</h1>
+            <h1 id="titre3">NANTAIS</h1>
+          </div>
+    </header>
+
+    <div class = "main">
+      <img id ="image2" src = "images/Group.png">
+      <div class="questions">
+        <h2 id="texte1">QUOI ?</h2>
+        <h2 id="texte2">QUAND ?</h2>
+      </div>
+
+      <form>
+        <label for="start">Start date:</label>
+        <input type="date" id="start" name="trip-start"
+             min="2023-07-24" max="2024-12-31">
+            </div>
+      <div class="preference">
+        <label for="input1">Théâtre</label>
+        <input type="checkbox" name="input1" id="input1">
+      </div>
+        <input type="checkbox" id="input2">Musique</input>
+        <label>Musique</label>
+
+        <input type="checkbox" id="input3">
+        <label>Conférence</label>
+
+        <input type="checkbox" id="input4">
+        <label>Spectacle</label>
+      <form>
+    </div>
+  </div>
+    
+    <div>
+        <button id="SubmitButton" onclick="getDate()">Recherchez maintenant !</button>
+    </div>
+
+    <div id="maCarte"></div>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>"
+
+</body>
+</html>
