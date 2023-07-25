@@ -4,10 +4,9 @@ body {
 
 #maCarte { 
     height: 25em; 
-    align-content: flex-start;
 }
 
-.container {
+.containerAccueil {
     display: flex;
 }
 
@@ -78,8 +77,33 @@ button {
     display: flex;
 } */
 
+.containerDescription{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2em;
+    padding: 1em;
+}
+
+.containerDescription .fiche .nom{   
+    font-size: 1em;
+    font-family: Impact;
+    color: #F8EEE1;
+    background-color: #898d55;
+    padding: 1%;
+}
+
+.containerDescription .fiche{
+    width: 19%;
+    font-size: 1em;
+    font-family: Arial;
+    text-align: justify;
+    border-width: 2px;
+    background-color: #f3e2a7 ;
+    padding: 1.5%;
+}
 
 
-
-
-
+/* pas plus de 3 éléments dans un sélecteur: bonne pratique = BEM (norme nommage) */

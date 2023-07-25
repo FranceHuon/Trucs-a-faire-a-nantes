@@ -16,7 +16,7 @@
     <body>
         <div>
             <label id="page">
-                <div class="container">
+                <div class="containerAccueil">
                     <img src="images/lu.png">
                     <h1 id="titre1">GÉNÉRATEUR</h1>
                     <h1 id="titre2">D'ÉVÈNEMENTS</h1>
@@ -45,7 +45,6 @@
                             <label for="expo">Expo</label>
                         </div>
                     </div>
-                </div>
         
                 <br>
                 <br>
@@ -61,6 +60,7 @@
                         <label for="start">Date de fin : </label>
                         <input type="date" id="end" name="trip-end" min="2023-07-24" max="2024-12-31">
                     </div>
+                </div>
                 </div>
     
                 <br>
@@ -83,7 +83,7 @@
             <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
             <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>    
 
-        <div id="description"></div>
+        <div id="description" class="containerDescription"></div>
         </div>
     </body>
 

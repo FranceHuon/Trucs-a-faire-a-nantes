@@ -137,11 +137,12 @@ carte.addLayer(marqueurs);
 
 for (i in arrayTheme) {
     // dateFormatFr = Date.parse(arrayTheme[i].fields.date).toLocaleString("fr-FR") marche pas 
-    document.querySelector('#description').innerHTML += `<label><b>${arrayTheme[i].fields.lieu}
+    document.querySelector('#description').innerHTML += `<div class='fiche'><p class='nom'>${arrayTheme[i].fields.nom}</p>
     <br>${arrayTheme[i].fields.date} à ${arrayTheme[i].fields.heure_debut}
     <br>${arrayTheme[i].fields.type}
+    <br>${arrayTheme[i].fields.lieu}
     <br>${arrayTheme[i].fields.url_site}
-    <br>${arrayTheme[i].fields.description}<label>`
+    <br>${arrayTheme[i].fields.description}</div>`
 
 }
 
