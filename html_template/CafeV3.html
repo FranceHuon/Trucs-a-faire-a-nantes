@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Générateur de spectacles nantais</title>
+    <link href="CafeV2.css" rel="stylesheet"/>
+    <script src="js/CafeV2.js"></script>
+  </head>
+
+  <body>
+    <div>
+      <div class="container">
+        <img src="/Users/francehuon/Desktop/lu.png">
+        <h1 id="titre1">GÉNÉRATEUR</h1>
+        <h1 id="titre2">D'ÉVÈNEMENTS</h1>
+        <h1 id="titre3">NANTAIS</h1>
+      </div>
+      
+      <div class = "main">
+        <div class="checkbox">
+          <div>
+            <input type="checkbox" id="musique" name="musique" value="musique">
+            <label for="musique">Musique</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" id="spectacle" name="spectacle" value="spectacle">
+            <label for="spectacle">Spectacle</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" id="conference" name="conference" value="conference">
+            <label for="conference">Conférence</label>
+          </div>
+          
+          <div>
+            <input type="checkbox" id="expo" name="expo" value="expo">
+            <label for="expo">Expo</label>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      
+      <div class="calendar">
+        <div class="start">
+          <label for="start">Date de début : </label>
+          <input type="date" id="start" name="trip-start"
+          min="2023-07-24" max="2024-12-31">
+        </div>
+        <br>
+        <div class="end">
+          <label for="start">Date de fin : </label>
+          <input type="date" id="end" name="trip-end"
+          min="2023-07-24" max="2024-12-31">
+        </div>
+      </div>
+
+      <br>
+
+      <footer>
+      </footer>
+
+      <br>
+      <br>
+      <br>
+
+      <div class= "button" type="button">
+        <button onclick="askDate(); askTheme()">Recherchez maintenant !</button>
+      </div>
+    </div>
+    
+    <!-- <div id="maCarte"></div> -->
+
+        <!-- <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+        <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>" -->
+
+</body>
+</html>
