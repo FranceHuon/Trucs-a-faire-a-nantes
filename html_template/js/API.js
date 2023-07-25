@@ -71,6 +71,7 @@ async function dataEvents() {
             arrayTheme.push(arrayDate[i] )
         }
     }
+    console.log(arrayTheme)
 
     //Fonction de récupération des coordonées GPS
     let dicoGPS = {};
@@ -134,15 +135,30 @@ carte.fitBounds(groupe.getBounds().pad(0.5));
 
 carte.addLayer(marqueurs);
 
-// recup infos pour description evenement
-// let arrayDescription = [];
-// for (i in arrayTheme) {
-//     let name = arrayTheme[i].fields.lieu ;
-//     arrayName.push(name);
-// }
+for (i in arrayTheme) {
+    // dateFormatFr = Date.parse(arrayTheme[i].fields.date).toLocaleString("fr-FR") marche pas 
+    document.querySelector('#description').innerHTML += `<label><b>${arrayTheme[i].fields.lieu}
+    <br>${arrayTheme[i].fields.date} à ${arrayTheme[i].fields.heure_debut}
+    <br>${arrayTheme[i].fields.type}
+    <br>${arrayTheme[i].fields.url_site}
+    <br>${arrayTheme[i].fields.description}<label>`
+
+}
 
     return infos
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // //Fonction récupération des noms
@@ -173,3 +189,35 @@ carte.addLayer(marqueurs);
 //     "Lieu Unique : LU": {"lat": 47.2154659 , "long": -1.5457862},
 //     "Stereolux": {"lat": 47.20511813 , "long": -1.5634211}
 // }
+
+
+
+
+// recup infos pour description evenement
+// let dicoDescription = {};
+// for (i in arrayTheme) {
+//     // type d'evenement (retirer le virgules à la fin)
+//     let type = arrayTheme[i].fields.type ;
+//     dicoDescription.push(type);
+
+//     let dateEvenement = arrayTheme[i].fields.date ;
+//     dicoDescription.push(dateEvenement);
+
+//     let heureDebut = arrayTheme[i].fields.heure_debut ;
+//     dicoDescription.push(heureDebut);
+
+//     if (arrayTheme[i].fields.heure_fin) {
+//         let heureFin = arrayTheme[i].fields.heure_fin ;
+//         dicoDescription.push(heureFin);
+//     }
+
+//     let lieu = arrayTheme[i].fields.lieu;
+//     dicoDescription.push(lieu); 
+    
+//     let description = arrayTheme[i].fields.description;
+//     dicoDescription.push(description);
+
+//     let URL = arrayTheme[i].fields.url_site ;
+//     dicoDescription.push(URL);
+// }
+// console.log(dicoDescription)

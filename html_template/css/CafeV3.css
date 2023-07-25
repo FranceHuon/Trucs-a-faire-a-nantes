@@ -3,7 +3,8 @@ body {
 }
 
 #maCarte { 
-    height: 400px; 
+    height: 25em; 
+    align-content: flex-start;
 }
 
 .container {
@@ -12,7 +13,7 @@ body {
 
 img {
    width: 30%;
-   border-radius: 20%;
+   /* border-radius: 20%; */
    flex-direction: row;
 }
 
@@ -67,7 +68,15 @@ button {
     box-shadow:none ;
 }
 
+.description {
+    /* align-content: flex-end; */
+    font-size: 2em;
+    font-family: Impact;
+}
 
+/* .containerCarte {
+    display: flex;
+} */
 
 
 
