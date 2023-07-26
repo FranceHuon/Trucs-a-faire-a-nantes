@@ -2,107 +2,147 @@ body {
     background-color: var(--blanc-beige, #F8EEE1);
 }
 
-#maCarte { 
-    height: 25em; 
-}
-
 .containerAccueil {
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0.2em;
 }
 
-img {
-   width: 30%;
-   /* border-radius: 20%; */
-   flex-direction: row;
+.containerAccueil img {
+    display: flex;
+    width: 110%;
+    justify-content: space-around;
+    padding: 3em;
 }
 
-h1 {
+.containerAccueil h1 {
     color: var(--title-color, #F63);
     font-size: 6em;
     font-style: normal;
     line-height: normal;
     font-family: Impact, serif;
-    justify-content: flex-end;
-    justify-content: space-between;
-    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap : wrap;
+    display: flex;
 }
 
-.calendar {
-    font-family: Impact;
-    font-size: 4em;
-    color: var(--vert, #898d55);
-    justify-content: space-around;
-    display: flex;
-    flex-direction: column;
-}
-
-.checkbox {
-    font-family: Impact;
-    font-size: 4em;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-around;
+.containerAccueil .checkbox h2 {
+    font-size: 1em;
+    font-style: normal;
+    line-height: normal;
+    font-family: Impact, serif;
+    align-items: flex-start;
     color: var(--jaune, #FBB04C);
+    margin-top: 0.5em;
 }
 
-footer {
-    width: 100%;
-    height: 20px;
-    background-color: var(--noir-gris, #31302F);
+.containerAccueil .checkbox {
     display: flex;
-    align-content: flex-end;
+    font-family: Impact;
+    text-align: left;
+    font-size: 3em;
     justify-content: space-around;
+    flex-direction: column;
+    color: var(--jaune, #FBB04C);
+    width: 90%;
+    padding-left: 1.5em;
 }
 
+.checkbox .larger {
+    width: 2em;
+    height: 2em;
+}
+
+.calendarAndButton {
+    font-family: Impact;
+    font-size: 3em;
+    color: var(--vert, #898d55);
+    display: flex;
+    margin-left: 1em;
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+
+.calendarAndButton .start {
+    align-content: space-between;
+    padding-left: 0.1em;
+}
+
+.calendarAndButton .end {
+    padding-left: 1em;
+}
+
+.calendarAndButton .larger {
+    width: 10em;
+    height: 3em;
+}
+    
 button {
-    font-size: 2em;
+    font-size: 1em;
     font-family: Impact;
     color: var(--blanc-beige, #F8EEE1);
     border-radius: 20px;
-    width:400px;
-    height:100px;
+    width:6em;
+    height:1.5em;
     background-color:var(--title-color, #F63);
     border-color:var(--title-color, #F63) ;
     box-shadow:none ;
+    /* justify-content: center;
+    text-align: center;
+    align-items: center; */
 }
 
-.description {
-    /* align-content: flex-end; */
-    font-size: 2em;
-    font-family: Impact;
+.buttonSearch {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-right: 1em;
+}
+
+#maCarte { 
+    height: 25em; 
+}
+
+.containerCarte {
+    background-color: #898d55;
 }
 
 /* .containerCarte {
-    display: flex;
+    display: none;
 } */
 
-.containerDescription{
+.containerDescription {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content:center;
+    align-items: center;
     gap: 2em;
     padding: 1em;
+    /* text-overflow: ellipsis; */
 }
 
-.containerDescription .fiche .nom{   
-    font-size: 1em;
+.containerDescription .fiche .nom {   
+    font-size: 1.2em;
     font-family: Impact;
-    color: #F8EEE1;
-    background-color: #898d55;
+    /* background-color: #F8EEE1; */
+    color: #898d55;
     padding: 1%;
 }
 
-.containerDescription .fiche{
+.containerDescription .fiche {
     width: 19%;
+    height: 10em;
     font-size: 1em;
     font-family: Arial;
     text-align: justify;
     border-width: 2px;
     background-color:var(--blanc-beige, #F8EEE1);
-    text-overflow: ellipsis;
+    text-overflow: eliipsis;
     overflow: hidden;
     white-space: nowrap;
     padding: 1em;
