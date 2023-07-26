@@ -101,8 +101,11 @@ button {
     font-family: Arial;
     text-align: justify;
     border-width: 2px;
-    background-color: #f3e2a7 ;
-    padding: 1.5%;
+    background-color:var(--blanc-beige, #F8EEE1);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 1em;
 }
 
 
