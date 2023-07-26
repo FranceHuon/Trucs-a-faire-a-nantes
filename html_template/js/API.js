@@ -137,11 +137,27 @@ carte.addLayer(marqueurs);
 
 for (i in arrayTheme) {
     // dateFormatFr = Date.parse(arrayTheme[i].fields.date).toLocaleString("fr-FR") marche pas 
+    
+    // supprime la ligne mais laisse un saut de ligne
+    url = arrayTheme[i].fields.url_site
+    console.log(url)
+    if ( url == undefined) {
+        url = ""
+    } else{url = '<br>' + url }
+    
+    
+    // enlever les virgules des type
+    type = arrayTheme[i].fields.type
+    type = type.replace(/,,,/g,"")
+    type = type.replace(/,,/g,"")
+    type = type.replace(/,/g,", ") 
+    
+    // affichage fiches descriptives
     document.querySelector('#description').innerHTML += `<div class='fiche'><p class='nom'>${arrayTheme[i].fields.nom}</p>
     <br>${arrayTheme[i].fields.date} à ${arrayTheme[i].fields.heure_debut}
-    <br>${arrayTheme[i].fields.type}
+    <br>${type}
     <br>${arrayTheme[i].fields.lieu}
-    <br>${arrayTheme[i].fields.url_site}
+    ${url}
     <br>${arrayTheme[i].fields.description}</div>`
 
 }
