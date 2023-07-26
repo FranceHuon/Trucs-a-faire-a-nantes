@@ -140,10 +140,12 @@ button {
 }
 
 .containerDescription .fiche .nom {   
+    display: flex;
     font-size: 1.2em;
     font-family: Impact;
     /* background-color: #F8EEE1; */
     color: #898d55;
+    text-align: initial;
 }
 
 
