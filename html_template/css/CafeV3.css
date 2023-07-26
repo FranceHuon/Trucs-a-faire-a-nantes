@@ -126,26 +126,24 @@ button {
     /* text-overflow: ellipsis; */
 }
 
-.containerDescription .fiche .nom {   
-    font-size: 1.2em;
-    font-family: Impact;
-    /* background-color: #F8EEE1; */
-    color: #898d55;
-    padding: 1%;
-}
-
 .containerDescription .fiche {
     width: 19%;
-    height: 10em;
     font-size: 1em;
     font-family: Arial;
     text-align: justify;
     border-width: 2px;
     background-color:var(--blanc-beige, #F8EEE1);
-    text-overflow: eliipsis;
-    overflow: hidden;
-    white-space: nowrap;
+    flex-wrap:wrap;
+    word-wrap: break-word;
     padding: 1em;
+    margin-bottom: auto;
+}
+
+.containerDescription .fiche .nom {   
+    font-size: 1.2em;
+    font-family: Impact;
+    /* background-color: #F8EEE1; */
+    color: #898d55;
 }
 
 

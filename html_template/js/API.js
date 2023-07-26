@@ -143,21 +143,36 @@ for (i in arrayTheme) {
     console.log(url)
     if ( url == undefined) {
         url = ""
-    } else{url = '<br>' + url }
-    
+        if (arrayTheme[i].fields.lieu == "Zénith Nantes Métropole") {
+            url = "https://www.zenith-nantesmetropole.com/"
+        }
+        if (arrayTheme[i].fields.lieu == "Cité des Congrès") {
+            url = "https://lacite-nantes.fr/"
+        }
+        if (arrayTheme[i].fields.lieu == "Salle festive Nantes Nord") {
+            url = "https://metropole.nantes.fr/"
+        }
+        if (arrayTheme[i].fields.lieu == "Muséum d'Histoire Naturelle") {
+            url = "https://museum.nantesmetropole.fr"
+        }
+        if (arrayTheme[i].fields.lieu == "Musée d'arts de Nantes") {
+            url = "https://museedartsdenantes.nantesmetropole.fr/home"
+        }
+    }
     
     // enlever les virgules des type
     type = arrayTheme[i].fields.type
+    type = type.replace(/,,,,/g,"")
     type = type.replace(/,,,/g,"")
     type = type.replace(/,,/g,"")
     type = type.replace(/,/g,", ") 
     
     // affichage fiches descriptives
-    document.querySelector('#description').innerHTML += `<div class='fiche'><p class='nom'>${arrayTheme[i].fields.nom}</p>
-    <br>${arrayTheme[i].fields.date} à ${arrayTheme[i].fields.heure_debut}
-    <br>${type}
-    <br>${arrayTheme[i].fields.lieu}
-    ${url}
+    document.querySelector('#description').innerHTML += `<div class='fiche'><label class='nom'>${arrayTheme[i].fields.nom}</label><br>
+    <br>${arrayTheme[i].fields.lieu}<br>
+    <br>${arrayTheme[i].fields.date} à ${arrayTheme[i].fields.heure_debut}<br>
+    <br>${type}<br>
+    <br><a target="_blank" href="${url}">${url}</a><br>
     <br>${arrayTheme[i].fields.description}</div>`
 
 }
